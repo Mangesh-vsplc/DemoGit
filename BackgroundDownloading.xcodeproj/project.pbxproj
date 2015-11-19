@@ -207,6 +207,11 @@
 				TargetAttributes = {
 					CA79DFC61BFC55F800A99424 = {
 						CreatedOnToolsVersion = 7.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					CA79DFDF1BFC55F800A99424 = {
 						CreatedOnToolsVersion = 7.1;
@@ -412,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BackgroundDownloading/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vatsa.BackgroundDownloading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BackgroundDownloading/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vatsa.BackgroundDownloading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +503,7 @@
 				CA79DFF61BFC55F800A99424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA79DFF71BFC55F800A99424 /* Build configuration list for PBXNativeTarget "BackgroundDownloadingTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +512,7 @@
 				CA79DFF91BFC55F800A99424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA79DFFA1BFC55F800A99424 /* Build configuration list for PBXNativeTarget "BackgroundDownloadingUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +521,7 @@
 				CA79DFFC1BFC55F800A99424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
