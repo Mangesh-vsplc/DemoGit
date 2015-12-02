@@ -23,6 +23,9 @@ static NSString *sessionIdentifier = @"com.vatsa.backgroundtask";
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -37,7 +40,7 @@ static NSString *sessionIdentifier = @"com.vatsa.backgroundtask";
     self.sessionConfiguration.allowsCellularAccess = YES;
     NSURLSession *session = [NSURLSession sessionWithConfiguration:self.sessionConfiguration delegate:self delegateQueue:nil];
 
-    NSURL *url = [NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/3/3b/Colored-Pencils.jpg"];
+    NSURL *url = [NSURL URLWithString:@"http://192.169.59.131/K9Mobile.WebService/LookupDataSrv.svc/GetMasterLookupData/Garnavillo-IA-US-919782"];
     NSURLSessionDownloadTask *dataTask = [session downloadTaskWithURL:url];
     [dataTask resume];
 }
@@ -48,10 +51,13 @@ didFinishDownloadingToURL:(NSURL *)location {
     dispatch_sync(dispatch_get_main_queue(), ^{
         self.progressView.progress = 1.0;
         NSData *data = [NSData dataWithContentsOfURL:location];
-        [self.imgView setImage:[UIImage imageWithData:data]];
-        
+        NSString* responseStr = [NSString stringWithUTF8String:[data bytes]];
+        NSLog(@"%@",responseStr);         
     });
+}
 
+- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(nullable NSError *)error {
+    NSLog(@"Error %@",error);
 }
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
       didWriteData:(int64_t)bytesWritten

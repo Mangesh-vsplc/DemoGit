@@ -51,10 +51,10 @@
     NSLog(@"completionHandler");
     completionHandler(UIBackgroundFetchResultNewData);
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    localNotification.alertBody = @"Download COmplete";
+    localNotification.alertBody = @"Download Complete";
     localNotification.fireDate = [NSDate date];
-    localNotification.alertTitle = @"Alert";
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
