@@ -39,23 +39,23 @@
                                 </constraints>
                             </progressView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I1k-vZ-Miz">
-                                <rect key="frame" x="20" y="129" width="185" height="159"/>
+                                <rect key="frame" x="208" y="117" width="185" height="159"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="185" id="R2b-f5-rrY"/>
-                                    <constraint firstAttribute="height" constant="159" id="VEZ-6h-LLt"/>
+                                    <constraint firstAttribute="height" constant="159" id="47W-wC-ZCK"/>
+                                    <constraint firstAttribute="width" constant="185" id="TzG-v2-Mtk"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="I1k-vZ-Miz" firstAttribute="top" secondItem="zKJ-ER-54d" secondAttribute="bottom" constant="17" id="54G-KB-iSV"/>
                             <constraint firstItem="egj-7Q-7nN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="NNR-Br-5yn"/>
                             <constraint firstItem="egj-7Q-7nN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Rbk-tJ-hFa"/>
                             <constraint firstItem="zKJ-ER-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Req-Ic-Avy"/>
-                            <constraint firstItem="I1k-vZ-Miz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Uxf-fo-wCC"/>
                             <constraint firstItem="zKJ-ER-54d" firstAttribute="top" secondItem="egj-7Q-7nN" secondAttribute="bottom" constant="28" id="WHx-Cc-33f"/>
-                            <constraint firstItem="I1k-vZ-Miz" firstAttribute="top" secondItem="zKJ-ER-54d" secondAttribute="bottom" constant="29" id="cZ1-4L-CIZ"/>
+                            <constraint firstItem="I1k-vZ-Miz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dub-Bk-omf"/>
                         </constraints>
                     </view>
                     <connections>
