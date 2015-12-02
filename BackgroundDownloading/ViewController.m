@@ -38,8 +38,12 @@ static NSString *sessionIdentifier = @"com.vatsa.backgroundtask";
     [self.sessionConfiguration setSessionSendsLaunchEvents:YES];
     [self.sessionConfiguration setDiscretionary:YES];
     self.sessionConfiguration.allowsCellularAccess = YES;
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:self.sessionConfiguration delegate:self delegateQueue:nil];
+    [self dataTaskForImageDownload];
+}
 
+- (void)dataTaskForImageDownload {
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:self.sessionConfiguration delegate:self delegateQueue:nil];
+    
     NSURL *url = [NSURL URLWithString:@"http://192.169.59.131/K9Mobile.WebService/LookupDataSrv.svc/GetMasterLookupData/Garnavillo-IA-US-919782"];
     NSURLSessionDownloadTask *dataTask = [session downloadTaskWithURL:url];
     [dataTask resume];
@@ -59,6 +63,7 @@ didFinishDownloadingToURL:(NSURL *)location {
 - (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(nullable NSError *)error {
     NSLog(@"Error %@",error);
 }
+
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
       didWriteData:(int64_t)bytesWritten
  totalBytesWritten:(int64_t)totalBytesWritten
